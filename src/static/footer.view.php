@@ -1,0 +1,1 @@
+<script src="./public/assets/js/home.js"></script>
