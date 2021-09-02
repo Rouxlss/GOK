@@ -18,7 +18,7 @@
         $password_hash = hash('sha512', $password);
         // echo $id . $nombre_Apellido . $email . $password . $number . $genero_value;
 
-        $Query = 'insert into tbl_users values(:n1, :n2, :n3, :n4, :n5, :n6)';
+        $Query = 'insert into tbl_users values(:n1, :n2, :n3, :n4, :n5, :n6, :n7)';
         $statement = $connection->prepare($Query);
         $statement->execute(
             array(
@@ -27,7 +27,8 @@
                 ':n3'=>$email,
                 ':n4'=>$password_hash,
                 ':n5'=>$number,
-                ':n6'=>$genero_value
+                ':n6'=>$genero_value,
+                ':n7'=>date("Y-m-d H:i:s")
             )
         );
     }

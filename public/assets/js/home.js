@@ -56,6 +56,7 @@ modes_locked.forEach((mode) => {
 });
 
 //Boton para inscribir usuarios
+
 let submitUser = document.querySelector(".form__button");
 submitUser.addEventListener("click", () => {
   //Obtener valores
@@ -72,8 +73,6 @@ submitUser.addEventListener("click", () => {
       genero_value = genero.value;
     }
   });
-
-  // console.log(nombre_Apellido, email, password, number, terminos, genero_value);
 
   if (terminos.checked == true) {
     $.ajax({
