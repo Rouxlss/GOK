@@ -15,6 +15,9 @@ function connection($bdConfig ){
 
 }
 
+function register($connection) {
+    
+}
 
 
 

@@ -10,7 +10,7 @@
 
         switch ($view ) {
             case 'main':
-                include './src/main/main.view.php';
+                include './public/main.php';
                 break;
             
             default:
