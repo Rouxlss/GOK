@@ -9,6 +9,7 @@
 
     if($_POST['action'] == "Registrar") {
         $nombre_Apellido = $_POST['nombre_Apellido'];
+        $nombre_Apellido_utf8 = utf8_decode($nombre_Apellido);
         $email = $_POST['email'];
         $password = $_POST['password'];
         $number = $_POST['number'];    
@@ -23,7 +24,7 @@
         $statement->execute(
             array(
                 ':n1'=>$id,
-                ':n2'=>$nombre_Apellido,
+                ':n2'=>$nombre_Apellido_utf8,
                 ':n3'=>$email,
                 ':n4'=>$password_hash,
                 ':n5'=>$number,
@@ -31,5 +32,14 @@
                 ':n7'=>date("Y-m-d H:i:s")
             )
         );
+
+    //     $Query = "SELECT * FROM tbl_users";
+    // $statement = $connection->prepare($Query);
+    // $statement->execute();
+    // $usuario = $statement->fetchAll();
+
+    // print_r($usuario);
     }
+
+    
 ?>
