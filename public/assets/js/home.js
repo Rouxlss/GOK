@@ -91,6 +91,13 @@ submitUser.addEventListener("click", ()=> {
     
         success: function (data) {
           console.log(data);
+          nombre_Apellido = "";
+          email = "";
+          password = "";
+          number = "";
+          terminos.checked = false;
+          generos.checked = false;
+          form__bg.classList.add('d-none');
         },
     
         error: function (xhr, statusText, err) {

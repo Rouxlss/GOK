@@ -15,6 +15,7 @@
         $genero_value = $_POST['genero_value'];
         
         $id = hash('adler32', $nombre_Apellido.$email.$number);
+        $password_hash = hash('sha512', $password);
         // echo $id . $nombre_Apellido . $email . $password . $number . $genero_value;
 
         $Query = 'insert into tbl_users values(:n1, :n2, :n3, :n4, :n5, :n6)';
@@ -24,7 +25,7 @@
                 ':n1'=>$id,
                 ':n2'=>$nombre_Apellido,
                 ':n3'=>$email,
-                ':n4'=>$password,
+                ':n4'=>$password_hash,
                 ':n5'=>$number,
                 ':n6'=>$genero_value
             )
