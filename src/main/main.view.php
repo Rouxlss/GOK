@@ -26,23 +26,23 @@
                 <img class="form__close" src="<?= IMG ?>/close.png" alt="form__close">
                 <img class="form__container" src="<?= IMG ?>/marco-form.png" alt="form__container">
                 <div class="form__group">
-                    <input type="text" placeholder="Nombre y apellido" class="form__input input_text">
-                    <input type="email" placeholder="Correo eletronico" class="form__input input_text">
-                    <input type="password" placeholder="Contraseña" class="form__input input_text">
-                    <input type="number" placeholder="Edad" class="form__input input_text">
+                    <input id="nombre_Apellido" type="text" placeholder="Nombre y apellido" class="form__input input_text">
+                    <input id="email" type="email" placeholder="Correo eletronico" class="form__input input_text">
+                    <input id="password" type="password" placeholder="Contraseña" class="form__input input_text">
+                    <input id="number" type="number" placeholder="Edad" class="form__input input_text">
                     <div class="form__options">
                         <div class="form__control">
-                            <input type="checkbox" id="terminos" class="form__input inputtext">
+                            <input id="terminos" type="checkbox" id="terminos" class="form__input inputtext">
                             <label for="terminos">Aceptar terminos y condiciones</label>
                         </div>
-                        <div class="form__control form__radios">
+                        <div id="generos" class="form__control form__radios">
                             <div class="radio">
                                 <label for="M">M</label>
-                                <input type="radio" id="M" name="genero" class="form__input">
+                                <input type="radio" id="M" value="M" name="genero" class="form__input">
                             </div>
                             <div class="radio">
                                 <label for="F">F</label>
-                                <input type="radio" id="F" name="genero" class="form__input">
+                                <input type="radio" id="F" value="F" name="genero" class="form__input">
                             </div>
                         </div>
                     </div>

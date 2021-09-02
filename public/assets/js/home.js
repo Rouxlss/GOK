@@ -56,3 +56,47 @@ modes_locked.forEach(mode => {
     })
 });
 
+//Boton para inscribir usuarios
+let submitUser = document.querySelector(".form__button");
+submitUser.addEventListener("click", ()=> {
+    //Obtener valores
+    let nombre_Apellido = document.querySelector("#nombre_Apellido").value;
+    let email = document.querySelector("#email").value;
+    let password = document.querySelector("#password").value;
+    let number = document.querySelector("#number").value;
+    let terminos = document.querySelector("#terminos").value;
+    let generos = document.querySelectorAll("#generos input");
+    let genero_value;
+
+    generos.forEach(genero => {
+        if(genero.checked == true) {
+            genero_value = genero.value;
+        }
+    });
+
+    // console.log(nombre_Apellido, email, password, number, terminos, genero_value);
+
+    if(terminos.checked == true) {
+        $.ajax ({
+            type: "POST",
+            url: "./config/ajax/user.ajax.php",
+            data: {
+                action: 'Registrar',
+                nombre_Apellido,
+                email,
+                password,
+                number,
+                genero_value
+            },
+    
+        success: function (data) {
+          console.log(data);
+        },
+    
+        error: function (xhr, statusText, err) {
+          alert("error" + xhr.status);
+        }
+    
+      })
+    }
+});
