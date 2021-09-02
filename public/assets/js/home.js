@@ -64,7 +64,7 @@ submitUser.addEventListener("click", ()=> {
     let email = document.querySelector("#email").value;
     let password = document.querySelector("#password").value;
     let number = document.querySelector("#number").value;
-    let terminos = document.querySelector("#terminos").value;
+    let terminos = document.querySelector("#terminos");
     let generos = document.querySelectorAll("#generos input");
     let genero_value;
 

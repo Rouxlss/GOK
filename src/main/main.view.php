@@ -1,3 +1,5 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <div class="home">
     <img src="<?= IMG ?>/main-bg.png" alt="" class="home__bg">
     <div class="home__container">

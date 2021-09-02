@@ -1,9 +1,11 @@
 <?php
+
     include("../config.php");
-    require('../config/functions.php');
+    include('../functions.php');
+
     $connection = connection($bdconfig);
 
-    echo "AA";
+    // echo "AA";
 
     if($_POST['action'] == "Registrar") {
         $nombre_Apellido = $_POST['nombre_Apellido'];
@@ -13,9 +15,9 @@
         $genero_value = $_POST['genero_value'];
         
         $id = hash('adler32', $nombre_Apellido.$email.$number);
-        echo $id . $nombre_Apellido . $email . $password . $number . $genero_value;
+        // echo $id . $nombre_Apellido . $email . $password . $number . $genero_value;
 
-        $Query = 'insert into values(:n1, :n2, :n3, :n4, :n5, :n6)';
+        $Query = 'insert into tbl_users values(:n1, :n2, :n3, :n4, :n5, :n6)';
         $statement = $connection->prepare($Query);
         $statement->execute(
             array(
