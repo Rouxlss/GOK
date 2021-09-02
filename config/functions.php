@@ -14,7 +14,8 @@ function connection($bdConfig ){
     }
 
 }
-    
+
+
 
 
 ?>

@@ -511,9 +511,16 @@ body::-webkit-scrollbar {
     left: 100px;
     top: 150px;
     width: 40%;
+    cursor: pointer;
     transition: .4s;
+    animation: battle-animation ease infinite 4s;
 }
 
-.battle-text:hover {
-    transform: scale(1.4);
+@keyframes battle-animation  {
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
