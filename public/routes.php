@@ -12,6 +12,9 @@
             case 'main':
                 include './public/main.php';
                 break;
+            case 'lobby':
+                include './public/lobby.php';
+                break;
             
             default:
                 # code...
@@ -19,6 +22,3 @@
         }
 
     }
-
-
-?>
