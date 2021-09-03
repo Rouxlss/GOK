@@ -1,1 +1,1 @@
-<script src="./public/assets/js/home.js"></script>
+<script src="./public/assets/js/menu.js"></script>

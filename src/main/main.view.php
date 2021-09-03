@@ -64,9 +64,9 @@
         <img src="<?= IMG ?>/history-mode-bg.png" alt="" class="history__bg">
         <img src="<?= IMG ?>/h-mode-title.png" alt="" class="history__title">
         <div class="modes-toplay">
-            <div class="mode unlocked">
+            <a href="./?view=lobby" class="mode unlocked">
                 <img src="<?= IMG ?>/recluta.png" alt="" class="mode__img">
-            </div>
+            </a> 
             <div class="mode lock">
                 <img src="<?= IMG ?>/guerrero.png" alt="" class="mode__img">
             </div>
@@ -94,6 +94,7 @@
     </div>
 </div>
 
+<script src="./public/assets/js/home.js"></script>
 <?php
 
 include './src/static/footer.view.php';
