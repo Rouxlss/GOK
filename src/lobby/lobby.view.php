@@ -1,20 +1,21 @@
 <div class="lobby">
+    <div class="home__btn">
+        <img src="<?= IMG ?>/menu.png" alt="">
+    </div>
+    <div class="home__menu d-none">
+        <img src="<?= IMG ?>/menu-float.png" alt="">
+        <ul class="menu__list">
+            <li>INICIO</li>
+            <li>MI PERFÍL</li>
+            <li>MEDALLAS</li>
+            <li>MUNDOS</li>
+            <li>BATALLA EN LINEA</li>
+            <li>AYUDA</li>
+        </ul>
+    </div>
     <div class="lobby__header">
         <img class="header__bg" src="<?= IMG ?>/lobby/header.png" alt="">
-        <div class="home__btn">
-            <img src="<?= IMG ?>/menu.png" alt="">
-        </div>
-        <div class="home__menu d-none">
-            <img src="<?= IMG ?>/menu-float.png" alt="">
-            <ul class="menu__list">
-                <li>INICIO</li>
-                <li>MI PERFÍL</li>
-                <li>MEDALLAS</li>
-                <li>MUNDOS</li>
-                <li>BATALLA EN LINEA</li>
-                <li>AYUDA</li>
-            </ul>
-        </div>
+
         <div class="home__logo">
             <img src="<?= IMG ?>/boton-game-of-logo.png" alt="">
         </div>
@@ -35,34 +36,34 @@
             <div class="weapon">
                 <img src="<?= IMG ?>/lobby/rune.png" class="rune" alt="">
                 <img src="<?= IMG ?>/lobby/blade.png" class="weapon_img" alt="">
-                <img src="<?= IMG ?>/lobby/nivel_herreria.png" class="nivel_herreria d-none"  alt="">
+                <img src="<?= IMG ?>/lobby/nivel_herreria.png" class="nivel_herreria d-none" alt="">
             </div>
             <div class="weapon">
                 <img src="<?= IMG ?>/lobby/rune.png" class="rune" alt="">
                 <img src="<?= IMG ?>/lobby/helmet.png" class="weapon_img" alt="">
-                <img src="<?= IMG ?>/lobby/nivel_herreria.png" class="nivel_herreria d-none"  alt="">
+                <img src="<?= IMG ?>/lobby/nivel_herreria.png" class="nivel_herreria d-none" alt="">
             </div>
             <div class="weapon">
                 <img src="<?= IMG ?>/lobby/rune.png" class="rune" alt="">
                 <img src="<?= IMG ?>/lobby/overalls.png" class="weapon_img" alt="">
-                <img src="<?= IMG ?>/lobby/nivel_herreria.png" class="nivel_herreria d-none"  alt="">
+                <img src="<?= IMG ?>/lobby/nivel_herreria.png" class="nivel_herreria d-none" alt="">
             </div>
         </div>
         <div class="col-wapons col-right">
             <div class="weapon">
                 <img src="<?= IMG ?>/lobby/rune.png" class="rune" alt="">
                 <img src="<?= IMG ?>/lobby/shield.png" class="weapon_img" alt="">
-                <img src="<?= IMG ?>/lobby/nivel_herreria.png" class="nivel_herreria d-none"  alt="">
+                <img src="<?= IMG ?>/lobby/nivel_herreria.png" class="nivel_herreria d-none" alt="">
             </div>
             <div class="weapon">
                 <img src="<?= IMG ?>/lobby/rune.png" class="rune" alt="">
                 <img src="<?= IMG ?>/lobby/glove.png" class="weapon_img" alt="">
-                <img src="<?= IMG ?>/lobby/nivel_herreria.png" class="nivel_herreria d-none"  alt="">
+                <img src="<?= IMG ?>/lobby/nivel_herreria.png" class="nivel_herreria d-none" alt="">
             </div>
             <div class="weapon">
                 <img src="<?= IMG ?>/lobby/rune.png" class="rune" alt="">
                 <img src="<?= IMG ?>/lobby/boots.png" class="weapon_img" alt="">
-                <img src="<?= IMG ?>/lobby/nivel_herreria.png" class="nivel_herreria d-none"  alt="">
+                <img src="<?= IMG ?>/lobby/nivel_herreria.png" class="nivel_herreria d-none" alt="">
             </div>
         </div>
         <div class="lobby__stats-01">
@@ -75,7 +76,7 @@
                 <img src="<?= IMG ?>/lobby/stats-circle.png" class="bg__stats-medal" alt="">
                 <img src="<?= IMG ?>/medals/01.Medalla_Ases.png" class="stats-medal" alt="">
             </div>
-        </div> 
+        </div>
         <div class="lobby__stats-02">
             <img src="<?= IMG ?>/lobby/stats-02.png" class="bg__stats-02" alt="">
             <div class="gold stat">

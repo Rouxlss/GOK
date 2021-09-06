@@ -60,12 +60,12 @@ body::-webkit-scrollbar {
     width: 70px;
     height: 70px;
     position: absolute;
-    left: 50px;
-    top: 50px;
+    left: 4%;
+    top: 3%;
     transition: .4s;
     transform: scale(1.4);
     cursor: pointer;
-    z-index: 100;
+    z-index: 100000;
 }
 
 .home__menu {
@@ -76,7 +76,7 @@ body::-webkit-scrollbar {
     top: -40px;
     transition: .4s;
     cursor: pointer;
-    z-index: 100;
+    z-index: 100000;
 }
 
 .menu__list {
@@ -549,7 +549,7 @@ body::-webkit-scrollbar {
     top: 0;
     width: 100%;
     height: 100px;
-    z-index: 300;
+    z-index: 30;
 }
 
 .lobby__header .header__bg {
@@ -633,7 +633,7 @@ body::-webkit-scrollbar {
 .col-wapons {
     position: absolute;
     width: 200px;
-    height: 55vh;
+    height: 50vh;
     bottom: 40px;
     margin: auto;
     z-index: 500;
@@ -803,7 +803,7 @@ body::-webkit-scrollbar {
 
 .lobby__stats-01 {
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 5%;
     width: 30%;
     height: 40px;
@@ -916,4 +916,149 @@ body::-webkit-scrollbar {
     opacity: 0.2;
     position: absolute;
     width: 100%;
+}
+
+/* MEDALS */
+
+.medals {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.medals__list {
+    width: 90%;
+    height: 100px;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+}
+
+.medals__space {
+    position: relative;
+    width: 15%;
+    height: 120%;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.medals__space:hover {
+    transform: scale(1.2);
+}
+
+.medals__space .space__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.medals__info {
+    position: absolute;
+    width: 80%;
+    height: 75vh;
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10000;
+    font-family: 'Teko', sans-serif;
+
+}
+
+.info__body {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .4s;
+}
+
+.lobby__ground_mask {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+    height: 50%;
+    transition: .4s;
+}
+
+.medals__info .form__container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+}
+
+.medals__info .info__title {
+    position: absolute;
+    z-index: 1000;
+    font-size: 2.5em;
+    top: 20%;
+    left: 20%;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.651);
+}
+
+.info__img {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 5%;
+}
+
+.info__info {
+    position: absolute;
+    z-index: 1000;
+    color: #ffffff;
+    font-size: 1.5em;
+    bottom: 30%;
+    left: 20%;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.651);
+    width: 40%;
+}
+
+/* colors */
+
+.aces {
+    color: #FF4C36;
+}
+
+.trebol {
+    color: #83FF63;
+}
+
+.corazon {
+    color: #FF4C36;
+}
+
+.diamante {
+    color: #CEB1E1;
+}
+
+.espada {
+    color: #FFFF3B;
+}
+
+.anima {
+    color: #67ECEB;
+}
+
+.world-color {
+    color: #FFFF3B;
+}
+
+.level-color {
+    color: #41bb3c;
 }

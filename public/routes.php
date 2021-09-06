@@ -15,6 +15,9 @@
             case 'lobby':
                 include './public/lobby.php';
                 break;
+            case 'medals':
+                include './public/medals.php';
+                break;
             
             default:
                 # code...

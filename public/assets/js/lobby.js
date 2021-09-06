@@ -107,6 +107,7 @@ col_weapons[0].addEventListener('click', (e)=> {
             level.style.opacity = 1
         }, 100);
     }, 100);
+
     
 })
 
@@ -129,3 +130,20 @@ col_weapons[1].addEventListener('click', (e)=> {
     }, 100);
 
 })
+
+window.addEventListener("click", function (e) {
+    
+    if (col_weapons[0].contains(e.target) || col_weapons[1].contains(e.target)) {
+
+
+
+    }else {
+        document.querySelectorAll('.nivel_herreria').forEach(e => {
+            e.style.opacity = 0
+            setTimeout(() => {
+                e.classList.add('d-none')
+            }, 100);
+        });
+    }
+
+  });
