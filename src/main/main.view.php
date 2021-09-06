@@ -66,7 +66,7 @@
         <div class="modes-toplay">
             <a href="./?view=lobby" class="mode unlocked">
                 <img src="<?= IMG ?>/recluta.png" alt="" class="mode__img">
-            </a> 
+            </a>
             <div class="mode lock">
                 <img src="<?= IMG ?>/guerrero.png" alt="" class="mode__img">
             </div>
@@ -84,7 +84,9 @@
         </div>
         <div class="other__space">
             <img src="<?= IMG ?>/other.png" alt="other__bg" class="other__bg">
-            <img src="<?= IMG ?>/mundo1.png" alt="other__icon" class="other__icon">
+            <a href="./?view=world">
+                <img src="<?= IMG ?>/mundo1.png" alt="other__icon" class="other__icon">
+            </a>
             <img src="<?= IMG ?>/mundos.png" alt="other__text" class="other__text">
         </div>
     </div>

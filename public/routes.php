@@ -15,7 +15,11 @@
             case 'lobby':
                 include './public/lobby.php';
                 break;
-            
+                
+            case 'world':
+                include('./public/world.php');
+                break;
+                
             default:
                 # code...
                 break;
