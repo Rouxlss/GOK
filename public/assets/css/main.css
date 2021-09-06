@@ -620,12 +620,20 @@ body::-webkit-scrollbar {
     left: 0;
     right: 0;
     margin: auto;
+    transition: 4s;
+    animation: move-ground 1s;
+}
+
+@keyframes move-ground {
+    0% {
+        transform: translateY(150px);
+    }
 }
 
 .col-wapons {
     position: absolute;
     width: 200px;
-    height: 60vh;
+    height: 55vh;
     bottom: 40px;
     margin: auto;
     z-index: 500;
@@ -636,7 +644,7 @@ body::-webkit-scrollbar {
 }
 
 .col-left {
-    left: 5%;
+    left: 0%;
     animation: move-left 1s;
 }
 
@@ -652,7 +660,7 @@ body::-webkit-scrollbar {
 }
 
 .col-right {
-    right: 5%;
+    right: 0%;
     animation: move-right 1s;
 }
 
@@ -663,6 +671,24 @@ body::-webkit-scrollbar {
     position: relative;
     display: flex;
     justify-content: center;
+}
+
+.weapon .nivel_herreria {
+    position: absolute;
+    width: 130%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+    transition: .4s;
+}
+
+.col-left .weapon .nivel_herreria {
+    left: 100px;
+}
+
+.col-right .weapon .nivel_herreria {
+    right: 100px;
 }
 
 .weapon .rune {
@@ -700,7 +726,49 @@ body::-webkit-scrollbar {
     right: 300px;
     margin: auto;
     bottom: -400px;
-    opacity: 0.4;
+    opacity: 0.3;
+    animation: move-bg-character 2s;
+}
+
+
+.lobby__play_btn {
+    cursor: pointer;
+    position: absolute;
+    bottom: -20px;
+    width: 20%;
+    z-index: 20000;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: .4s;
+    animation: move-ground 1.3s;
+}
+
+.lobby__play_btn:hover {
+    transform: scale(1.2);
+}
+
+
+.lobby__main_left-arrow {
+    position: absolute;
+    width: 70px;
+    z-index: 30000;
+    left: 35%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+.lobby__main_right-arrow {
+    position: absolute;
+    width: 70px;
+    z-index: 30000;
+    right: 35%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
 }
 
 .lobby__main_character {
@@ -709,22 +777,143 @@ body::-webkit-scrollbar {
     left: 0;
     right: 0;
     margin: auto;
-    bottom: 40px;
+    bottom: 60px;
     z-index: 10000;
+    animation: show-character 1.5s;
 }
 
-.lobby__play_btn {
-    cursor: pointer;
+
+@keyframes move-bg-character {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes show-character {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.lobby__stats-01 {
     position: absolute;
-    bottom: -20px;
-    width: 20%;
+    top: 25%;
+    left: 5%;
+    width: 30%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     z-index: 1000;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transition: .4s;
 }
 
-.lobby__play_btn:hover {
-    transform: scale(1.2);
+.bg__stats-01 {
+    position: absolute;
+    width: 100%;
+}
+
+.stats01__pic {
+    position: absolute;
+    left: 21px;
+    top: -65px;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    z-index: 10000;
+    border-radius: 100%;
+}
+
+.stats01__pic .bg__stats-pic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    object-fit: cover;
+}
+
+.stats-pp {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.stats01__medal {
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    z-index: 10000;
+    border-radius: 100%;
+}
+
+.bg__stats-medal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    object-fit: cover;
+}
+
+.stats-medal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lobby__stats-02 {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    width: 13%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lobby__stats-02 .stat img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.lobby__stats-02 .stat {
+    width: 40%;
+    position: relative;
+    height: 90%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    font-family: 'Teko', sans-serif;
+}
+
+.lobby__stats-02 .stat img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.lobby__stats-02 .stat p {
+    color: yellow;
+    font-size: 25px;
+    text-shadow: 2px 2px rgba(121, 108, 34, 0.651);
+}
+
+.bg__stats-02 {
+    opacity: 0.2;
+    position: absolute;
+    width: 100%;
 }
