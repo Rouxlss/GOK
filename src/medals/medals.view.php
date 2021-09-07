@@ -1,20 +1,10 @@
 <div class="medals">
-    <div class="home__btn">
-        <img src="<?= IMG ?>/menu.png" alt="">
-    </div>
-    <div class="home__menu d-none">
-        <img src="<?= IMG ?>/menu-float.png" alt="">
-        <ul class="menu__list">
-            <li>INICIO</li>
-            <li>MI PERFÍL</li>
-            <li>MEDALLAS</li>
-            <li>MUNDOS</li>
-            <li>BATALLA EN LINEA</li>
-            <li>AYUDA</li>
-        </ul>
-    </div>
+
+    <?php include './src/static/menu.view.php'; ?>
+
     <div class="lobby__header">
         <img class="header__bg" src="<?= IMG ?>/lobby/header.png" alt="">
+
 
         <div class="home__logo">
             <img src="<?= IMG ?>/boton-game-of-logo.png" alt="">
@@ -95,7 +85,7 @@
                 <div class="info__title anima">Medalla Anima</div>
                 <img src="<?= IMG ?>/medals/06.Medalla_Anima.png" alt="" class="info__img">
                 <div class="info__info" style="font-size: 1.2em;">
-                Se le otorgara la medalla de <span class="anima">ANIMA</span> cuando logres obtener articulo del Peto y la Fé del guerrero, recuerda que deberás desbloquear la tierra de <span class='world-color'>Cnosos</span> y obtener habilidad al nivel 17, luego deberás llegar al nivel 20 y tendrás a la <span class='world-color'>Fortaleza negra</span> para finalizar la historia del juego, finalmente obtengas una partida de bonus extra llamada <span class='world-color'>Runas.</span>
+                    Se le otorgara la medalla de <span class="anima">ANIMA</span> cuando logres obtener articulo del Peto y la Fé del guerrero, recuerda que deberás desbloquear la tierra de <span class='world-color'>Cnosos</span> y obtener habilidad al nivel 17, luego deberás llegar al nivel 20 y tendrás a la <span class='world-color'>Fortaleza negra</span> para finalizar la historia del juego, finalmente obtengas una partida de bonus extra llamada <span class='world-color'>Runas.</span>
                 </div>
             </div>
         </div>

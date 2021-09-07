@@ -1,20 +1,8 @@
 <div class="home">
     <img src="<?= IMG ?>/main-bg.png" alt="" class="home__bg">
     <div class="home__container">
-        <div class="home__btn">
-            <img src="<?= IMG ?>/menu.png" alt="">
-        </div>
-        <div class="home__menu d-none">
-            <img src="<?= IMG ?>/menu-float.png" alt="">
-            <ul class="menu__list">
-                <li>INICIO</li>
-                <li>MI PERFÍL</li>
-                <li>MEDALLAS</li>
-                <li>MUNDOS</li>
-                <li>BATALLA EN LINEA</li>
-                <li>AYUDA</li>
-            </ul>
-        </div>
+        <?php include './src/static/menu.view.php'; ?>
+
         <div class="home__logo">
             <img src="<?= IMG ?>/boton-game-of-logo.png" alt="">
         </div>
@@ -66,7 +54,7 @@
         <div class="modes-toplay">
             <a href="./?view=lobby" class="mode unlocked">
                 <img src="<?= IMG ?>/recluta.png" alt="" class="mode__img">
-            </a> 
+            </a>
             <div class="mode lock">
                 <img src="<?= IMG ?>/guerrero.png" alt="" class="mode__img">
             </div>
@@ -84,7 +72,9 @@
         </div>
         <div class="other__space">
             <img src="<?= IMG ?>/other.png" alt="other__bg" class="other__bg">
-            <img src="<?= IMG ?>/mundo1.png" alt="other__icon" class="other__icon">
+            <a href="./?view=world">
+                <img src="<?= IMG ?>/mundo1.png" alt="other__icon" class="other__icon">
+            </a>
             <img src="<?= IMG ?>/mundos.png" alt="other__text" class="other__text">
         </div>
     </div>

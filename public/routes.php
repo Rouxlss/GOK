@@ -18,7 +18,13 @@
             case 'medals':
                 include './public/medals.php';
                 break;
-            
+            case 'worlds':
+                include('./public/worlds.php');
+                break;
+            case 'game':
+                include('./public/game.php');
+                break;
+ 
             default:
                 # code...
                 break;

@@ -1,18 +1,6 @@
 <div class="lobby">
-    <div class="home__btn">
-        <img src="<?= IMG ?>/menu.png" alt="">
-    </div>
-    <div class="home__menu d-none">
-        <img src="<?= IMG ?>/menu-float.png" alt="">
-        <ul class="menu__list">
-            <li>INICIO</li>
-            <li>MI PERFÍL</li>
-            <li>MEDALLAS</li>
-            <li>MUNDOS</li>
-            <li>BATALLA EN LINEA</li>
-            <li>AYUDA</li>
-        </ul>
-    </div>
+    <?php include './src/static/menu.view.php'; ?>
+
     <div class="lobby__header">
         <img class="header__bg" src="<?= IMG ?>/lobby/header.png" alt="">
 
