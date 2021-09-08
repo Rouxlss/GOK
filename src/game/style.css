@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+
+* {
+    user-select: none;
+
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease
+}
+
+/** ####################################### */
+
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.2;
+}
+
+.chessboard__bg {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    object-fit: cover;
+}
+
+.chess-table {
+    height: 370px;
+    width: 370px;
+    display: flex;
+    position: relative;
+    top: 2%;
+    left: 0.2%;
+    /* border: 3px solid black; */
+}
+
+.piece-box {
+    width: calc(100% /8);
+    height: calc(100% /8);
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.piece {
+    width: 100%;    
+    height: 100%;
+    object-fit: contain;
+}
+.piece-box-text {
+    /* display: none; */
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 12px;
+    color: #444;
+    opacity: 0.9;
+    display: none;
+}
+
+/** ####################################### */
+
+.piece-box.white-box {
+    background: rgba(255, 255, 255, 0.322);
+}
+.piece-box.black-box {
+    background: rgba(0, 0, 0, 0.432);
+}
+.piece-box.piece-selected {
+    background: rgb(255, 255, 0);
+    cursor: pointer;
+}
+.piece-box.piece-ready {
+    background: greenyellow;
+}
+.piece-box.piece-potential {
+    background: lightskyblue;
+    border: 0.1px solid rgb(24, 155, 236);
+}
+.piece-box.piece-not-allowed {
+    background: coral;
+}
+.piece-box.piece-pointer {
+    cursor: pointer;
+}
+
+/** #################################### */
+
+.chess-message .check-mate-message {
+    position: absolute;
+    width: 200px;
+    left: calc(-142px + 50vw);
+    top: calc(-10px + 50vh);
+    text-align: center;
+    padding: 10px 50px;
+}
+.chess-message .black-wins {
+    display: none;
+    background: black;
+    color: white;
+    box-shadow: 0 0 150px 75px white;
+}
+.chess-message .white-wins {
+    display: none;
+    background: white;
+    color: black;
+    box-shadow: 0 0 150px 75px black;
+}
+
+/** #################################### */
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .chess-table {
+        height: 240px;
+        width: 240px;
+    }
+    .piece-box {
+        width: 30px;
+        height: 30px;
+    }
+    img.piece {
+        width: 25px;    
+        height: 25px;
+    }
+    .chess-message .check-mate-message {
+        width: 150px;
+        top: calc(-15px + 50vh);
+        left: calc(-85px + 50vw);
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 560px) 
+  and (max-device-width: 820px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        padding: 50px 0;
+    }
+    .chess-message .check-mate-message {
+        width: 175px;
+        top: calc(35px + 50vh);
+        left: calc(-127.5px + 50vw);
+        font-size: 14px;
+        padding: 10px 40px;
+    }
+}

@@ -1,3 +1,3 @@
 <?php 
-    include './src/game/game.view.php';
+    include './src/game/index.php';
 ?>
