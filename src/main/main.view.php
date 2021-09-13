@@ -9,6 +9,9 @@
         <div class="home__join">
             <img src="<?= IMG ?>/boton-game-of.png" alt="">
         </div>
+        <div class="home__login">
+            <img src="<?= IMG ?>/boton-game-of.png" alt="">
+        </div>
         <div class="form__bg d-none">
             <div class="home__form">
                 <img class="form__close" src="<?= IMG ?>/close.png" alt="form__close">
@@ -38,6 +41,19 @@
                 <img class="form__button" src="<?= IMG ?>/form-btn.png" alt="">
             </div>
         </div>
+
+        <div class="form__login d-none">
+            <div class="home__form">
+                <img class="form__close" src="<?= IMG ?>/close.png" alt="form__close">
+                <img class="form__container" src="<?= IMG ?>/marco-form.png" alt="form__container">
+                <div class="form__group">
+                    <input id="emailLog" type="text" placeholder="Correo electr&oacute;nico" class="form__input input_text">
+                    <input id="passwordLog" type="password" placeholder="Contraseña" class="form__input input_text">
+                </div>
+            </div>
+            <img class="form__button" src="<?= IMG ?>/form-btn.png" alt="">
+        </div>
+
         <div class="home__video">
             <img class="video__close d-none" src="<?= IMG ?>/close.png" alt="form__close">
             <img class="video__container" src="<?= IMG ?>/video-container.png" alt="">

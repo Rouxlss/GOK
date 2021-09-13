@@ -41,5 +41,18 @@
     // print_r($usuario);
     }
 
-    
-?>
+    if($_POST['action'] == "Login") {
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $password_hash = hash('sha512', $password);
+
+        $Query = "select id from tbl_users where = :n1 and = :n2";
+        $statement = $connection->prepare($Query);
+        $statement->execute(
+            array(
+                ':n1'=>$email,
+                ':n2'=>$password_hash
+            )
+        );
+    }

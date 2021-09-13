@@ -3,7 +3,10 @@ home__menu = document.querySelector(".home__menu");
 
 home__form = document.querySelector(".home__form");
 form__bg = document.querySelector(".form__bg");
+form__login = document.querySelector(".form__login");
 home__join = document.querySelector(".home__join");
+home__login = document.querySelector(".home__login");
+
 form__close = document.querySelector(".form__close");
 
 video__close = document.querySelector(".video__close");
@@ -22,6 +25,14 @@ window.addEventListener("click", function (e) {
     document.body.style.overflow = "hidden";
   } else if (form__close.contains(e.target)) {
     form__bg.classList.add("d-none");
+    document.body.style.overflow = "auto";
+  }
+
+  if (home__login.contains(e.target)) {
+    form__login.classList.remove("d-none");
+    document.body.style.overflow = "hidden";
+  } else if (form__close.contains(e.target)) {
+    form__login.classList.add("d-none");
     document.body.style.overflow = "auto";
   }
 });
@@ -104,4 +115,31 @@ submitUser.addEventListener("click", () => {
       },
     });
   }
+});
+
+//Boton para login de usuarios
+
+let loginUser = document.querySelectorAll(".form__button");
+loginUser.addEventListener("click", () => {
+  let email = document.querySelector("#emailLog");
+  let password = document.querySelector("#passwordLog");
+  $.ajax({
+    type: "POST",
+    url: "./config/ajax/user.ajax.php",
+    data: {
+      action: "Login",
+      email: email.value,
+      password: password.value,
+    },
+
+    success: function () {
+      email.value = "";
+      password.value = "";
+      form__bg.classList.add("d-none");
+    },
+
+    error: function (xhr, statusText, err) {
+      alert("error" + xhr.status);
+    },
+  });
 });
