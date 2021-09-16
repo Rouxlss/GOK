@@ -50,8 +50,8 @@
                     <input id="emailLog" type="text" placeholder="Correo electr&oacute;nico" class="form__input input_text">
                     <input id="passwordLog" type="password" placeholder="Contraseña" class="form__input input_text">
                 </div>
+                <img class="form__button_Log" src="<?= IMG ?>/form-btn.png" alt="">
             </div>
-            <img class="form__button" src="<?= IMG ?>/form-btn.png" alt="">
         </div>
 
         <div class="home__video">

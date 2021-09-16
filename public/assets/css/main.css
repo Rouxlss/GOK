@@ -180,7 +180,7 @@ body::-webkit-scrollbar {
     position: absolute;
     width: 337px;
     height: 255px;
-    top: 500px;
+    top: 400px;
     left: 230px;
     transition: .4s;
 }
@@ -262,6 +262,20 @@ body::-webkit-scrollbar {
     z-index: 4000;
 }
 
+.home__form .form__button_Log {
+    position: absolute;
+    width: 35%;
+    z-index: 1000;
+    bottom: 3%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .4s;
+    z-index: 4000;
+}
+
 .input_text {
     border: none;
     background: #BBB5A5;
@@ -316,6 +330,10 @@ body::-webkit-scrollbar {
 }
 
 .home__form .form__button:hover {
+    transform: scale(1.2);
+}
+
+.home__form .form__button_Log:hover {
     transform: scale(1.2);
 }
 

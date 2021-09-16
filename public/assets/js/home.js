@@ -117,12 +117,18 @@ submitUser.addEventListener("click", () => {
   }
 });
 
-//Boton para login de usuarios
 
-let loginUser = document.querySelectorAll(".form__button");
+//Boton para login de usuarios
+let loginUser = document.querySelector(".form__button_Log");
+
 loginUser.addEventListener("click", () => {
+  
   let email = document.querySelector("#emailLog");
   let password = document.querySelector("#passwordLog");
+  
+// console.log("Funciona");
+// console.log(email.value, "-", password.value);
+
   $.ajax({
     type: "POST",
     url: "./config/ajax/user.ajax.php",
@@ -132,9 +138,11 @@ loginUser.addEventListener("click", () => {
       password: password.value,
     },
 
-    success: function () {
+    success: function (response) {
       email.value = "";
       password.value = "";
+      console.log("Datos enviados");
+      console.log(response);
       form__bg.classList.add("d-none");
     },
 

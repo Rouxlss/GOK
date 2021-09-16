@@ -1,37 +1,35 @@
 <?php
 
-    include("../config.php");
-    include('../functions.php');
+include("../config.php");
+include('../functions.php');
 
-    $connection = connection($bdconfig);
+$connection = connection($bdconfig);
 
-    // echo "AA";
+if ($_POST['action'] == "Registrar") {
+    $nombre_Apellido = $_POST['nombre_Apellido'];
+    $nombre_Apellido_utf8 = utf8_decode($nombre_Apellido);
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $number = $_POST['number'];
+    $genero_value = $_POST['genero_value'];
 
-    if($_POST['action'] == "Registrar") {
-        $nombre_Apellido = $_POST['nombre_Apellido'];
-        $nombre_Apellido_utf8 = utf8_decode($nombre_Apellido);
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $number = $_POST['number'];    
-        $genero_value = $_POST['genero_value'];
-        
-        $id = hash('adler32', $nombre_Apellido.$email.$number);
-        $password_hash = hash('sha512', $password);
-        // echo $id . $nombre_Apellido . $email . $password . $number . $genero_value;
+    $id = hash('adler32', $nombre_Apellido . $email . $number);
+    $password_hash = hash('sha512', $password);
+    // echo $id . $nombre_Apellido . $email . $password . $number . $genero_value;
 
-        $Query = 'insert into tbl_users values(:n1, :n2, :n3, :n4, :n5, :n6, :n7)';
-        $statement = $connection->prepare($Query);
-        $statement->execute(
-            array(
-                ':n1'=>$id,
-                ':n2'=>$nombre_Apellido_utf8,
-                ':n3'=>$email,
-                ':n4'=>$password_hash,
-                ':n5'=>$number,
-                ':n6'=>$genero_value,
-                ':n7'=>date("Y-m-d H:i:s")
-            )
-        );
+    $Query = 'insert into tbl_users values(:n1, :n2, :n3, :n4, :n5, :n6, :n7)';
+    $statement = $connection->prepare($Query);
+    $statement->execute(
+        array(
+            ':n1' => $id,
+            ':n2' => $nombre_Apellido_utf8,
+            ':n3' => $email,
+            ':n4' => $password_hash,
+            ':n5' => $number,
+            ':n6' => $genero_value,
+            ':n7' => date("Y-m-d H:i:s")
+        )
+    );
 
     //     $Query = "SELECT * FROM tbl_users";
     // $statement = $connection->prepare($Query);
@@ -39,20 +37,29 @@
     // $usuario = $statement->fetchAll();
 
     // print_r($usuario);
-    }
+}
 
-    if($_POST['action'] == "Login") {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+if ($_POST['action'] == "Login") {
 
-        $password_hash = hash('sha512', $password);
 
-        $Query = "select id from tbl_users where = :n1 and = :n2";
-        $statement = $connection->prepare($Query);
-        $statement->execute(
-            array(
-                ':n1'=>$email,
-                ':n2'=>$password_hash
-            )
-        );
-    }
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    echo "<script>alert('Prueba $email $password');</script>";
+    echo $connection;
+
+    // $Query = "select * from tbl_users where email = :n1 and password = :n2";
+    // $statement = $connection->prepare($Query);
+    // $statement->execute(
+    //     array(
+    //         ':n1' => $email,
+    //         ':n2' => $password,
+    //     )
+    // );
+
+    // if ($LogIn->rowCount() > 0) {
+    //     $DataU = $LogIn->fetch();
+    //     echo $DataU[1];
+    // } else {
+    //     echo "ERROR";
+    // }
+}
